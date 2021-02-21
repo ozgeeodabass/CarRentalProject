@@ -16,6 +16,16 @@ namespace Business.Concrete
             _brandDal = brandDal;
         }
 
+        public void Add(Brand brand)
+        {
+            _brandDal.Add(brand);
+        }
+
+        public void Delete(Brand brand)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Brand> GetAll()
         {
             return _brandDal.GetAll();
@@ -24,6 +34,11 @@ namespace Business.Concrete
         public Brand GetById(int brandId)
         {
             return _brandDal.Get(b => b.BrandId == brandId);
+        }
+
+        public void Update(Brand brand)
+        {
+            throw new NotImplementedException();
         }
     }
 }
